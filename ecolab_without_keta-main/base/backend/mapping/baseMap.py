@@ -16,4 +16,3 @@ class Map:
             width=self.width,
             height=self.height,
             zoom_start=2)
-

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  flask:
+    build: ./base
+    container_name: backend-flask
+    environment:
+      - PYTHONUNBUFFERED=True                   
+    # Перезапускаем сервис в случае падения 
+    restart: on-failure
+    volumes:
+      - ./base:/base
+    # Открываем порт в контейнер
+    # Порт, который будет смотреть наружу : порт который используется внутри контейнера
+    ports:
+      - "5000:5000"
+    command: python views.py
