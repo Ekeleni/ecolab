@@ -1,1 +1,0 @@
-# ecolab_without_keta

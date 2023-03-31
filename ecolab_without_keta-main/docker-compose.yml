@@ -2,7 +2,7 @@ version: '3'
 services:
   flask:
     build: ./base
-    container_name: backend-flask
+    container_name: ecolab
     environment:
       - PYTHONUNBUFFERED=True                   
     # Перезапускаем сервис в случае падения 
@@ -13,4 +13,4 @@ services:
     # Порт, который будет смотреть наружу : порт который используется внутри контейнера
     ports:
       - "5000:5000"
-    command: python views.py
+    command: views.py
